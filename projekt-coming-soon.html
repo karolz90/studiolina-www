@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coming soon – tu może pojawić się Twój projekt. Studiolina, projektowanie wnętrz Wrocław">
+  <title>Coming soon – studiolina</title>
+  <link rel="preload" href="assets/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">studiolina.</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html#projekty">projekty</a>
+      <a href="index.html#cennik">cennik</a>
+      <a href="index.html#studio">studio</a>
+      <a href="index.html#kontakt">kontakt</a>
+    </div>
+  </nav>
+
+  <!-- PROJEKT -->
+  <section class="projekt">
+    <div class="container">
+
+      <a href="index.html#projekty" class="projekt__back">← wszystkie projekty</a>
+
+      <h1 class="projekt__title">coming soon</h1>
+
+      <div class="projekt__meta">
+        <span>Twoja lokalizacja</span>
+        <span>2026</span>
+        <span>Twój projekt</span>
+      </div>
+
+      <p class="projekt__desc">Ten projekt jeszcze nie istnieje. Może to będzie Twoje mieszkanie, dom po remoncie albo lokal, w którym dobrze się przebywa. Jeśli planujesz zmianę, umów się na bezpłatną rozmowę. Sprawdzimy, czy do siebie pasujemy, a to miejsce w portfolio poczeka na efekt naszej współpracy.</p>
+
+      <div class="projekt__gallery">
+        <img src="assets/comingsoon.jpg" alt="Coming soon – miejsce na Twój projekt" class="projekt__img--half">
+      </div>
+
+      <div class="projekt__cta">
+        <p class="projekt__cta-text">porozmawiajmy o Twoim wnętrzu</p>
+        <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary">umów bezpłatną konsultację</a>
+      </div>
+
+      <nav class="projekt__nav">
+        <a href="projekt-antresola.html" class="projekt__nav-item">← projekt antresoli</a>
+        <span class="projekt__nav-item projekt__nav-item--disabled"></span>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="kontakt" class="footer">
+    <div class="container footer__content">
+      <div class="footer__info">
+        <p>zadzwoń: <a href="tel:+48690303701">+48 690 303 701</a> <span class="footer__note">(także WhatsApp)</span></p>
+        <p>napisz: <a href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a></p>
+        <p>śledź: <a href="https://instagram.com/studiolina.pl" target="_blank" rel="noopener">@studiolina.pl</a></p>
+        <p class="footer__location">WROCŁAW / ONLINE</p>
+        <p class="footer__lang">also available in English</p>
+        <p class="footer__copy">© studiolina 2026</p>
+      </div>
+      <p class="footer__logo">studiolina.</p>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.nav__burger');
+    const links = document.querySelector('.nav__links');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      links.classList.toggle('open');
+      burger.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('active');
+        links.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal
+    const revealTargets = document.querySelectorAll('.projekt__gallery > *, .projekt__cta, .projekt__nav');
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+
+    revealTargets.forEach(el => {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  </script>
+</body>
+</html>

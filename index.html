@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Studiolina – projektowanie wnętrz Wrocław. Projektuję mieszkania i domy, w których dobrze się mieszka. Architektka z 10-letnim międzynarodowym doświadczeniem.">
+  <title>Studiolina – projektowanie wnętrz Wrocław</title>
+
+  <!-- Open Graph (podgląd linku na LinkedIn, FB, WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://studiolina.pl">
+  <meta property="og:title" content="Studiolina – projektowanie wnętrz Wrocław">
+  <meta property="og:description" content="Projektuję mieszkania i domy, w których dobrze się mieszka. Architektka z 10-letnim międzynarodowym doświadczeniem.">
+  <meta property="og:image" content="https://studiolina.pl/assets/hero.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Studiolina">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Studiolina – projektowanie wnętrz Wrocław">
+  <meta name="twitter:description" content="Projektuję mieszkania i domy, w których dobrze się mieszka.">
+  <meta name="twitter:image" content="https://studiolina.pl/assets/hero.jpg">
+
+  <link rel="preload" href="assets/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="nav__logo">studiolina.</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav__links">
+      <a href="#projekty">projekty</a>
+      <a href="#cennik">cennik</a>
+      <a href="#studio">studio</a>
+      <a href="#kontakt">kontakt</a>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__slides">
+      <picture class="hero__slide is-active">
+        <source media="(max-width: 640px)" srcset="assets/hero_mobile.jpg">
+        <img src="assets/hero.jpg" alt="Projekt wnętrza – mieszkanie WUWA" class="hero__img">
+      </picture>
+      <picture class="hero__slide">
+        <img src="assets/hero_2.jpg" alt="Projekt wnętrza – mieszkanie Katowicka" class="hero__img">
+      </picture>
+      <!-- 3. slajd: dodaj tu kolejny <picture class="hero__slide">...</picture>, kropka dorobi się sama -->
+    </div>
+    <div class="hero__dots" aria-label="Wybór zdjęcia"></div>
+    <div class="hero__overlay">
+      <h1 class="hero__title">Wnętrza mieszkań i domów,<br>w których poczujesz się dobrze</h1>
+      <p class="hero__sub">architektka wnętrz we Wrocławiu, pracuję też online<br>od koncepcji po nadzór</p>
+      <div class="hero__buttons">
+        <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary">umów bezpłatną konsultację</a>
+        <a href="#proces" class="btn btn--outline">poznaj proces</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCES -->
+  <section id="proces" class="section section--accent">
+    <div class="container proces__inner">
+      <div class="proces__text">
+      <h2 class="section__title">proces projektowy</h2>
+      <ol class="proces__list">
+        <li>
+          <strong>Poznajemy się:</strong> wstępna konsultacja, inwentaryzacja, wywiad, brief.<br>
+          Razem ustalamy czego potrzebujesz. <span class="proces__time">~2 tygodnie.</span>
+        </li>
+        <li>
+          <strong>Projektuję:</strong> moodboard, układ funkcjonalny, model 3D, wizualizacje.<br>
+          dwie rundy poprawek w cenie. <span class="proces__time">~4-5 tygodni.</span>
+        </li>
+        <li>
+          <strong>Przygotowuję projekt pod ekipę:</strong> rysunki techniczne, detale dla stolarza,<br>
+          lista materiałów z cenami i linkami.<br>
+          Wszystko w PDF, gotowe dla ekipy. <span class="proces__time">~4-5 tygodni.</span>
+        </li>
+      </ol>
+      <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary">umów bezpłatną konsultację</a>
+      </div>
+      <div class="proces__photo proces__photo--filled">
+        <img src="assets/process.jpg" alt="Szkicownik z odręcznymi rysunkami projektowymi – proces pracy Studiolina">
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJEKTY -->
+  <section id="projekty" class="section">
+    <div class="container">
+      <h2 class="section__title section__title--dark">wybrane projekty</h2>
+      <div class="projekty__grid">
+        <a href="projekt-katowicka.html" class="projekty__item">
+          <div class="projekty__img-wrap">
+            <picture>
+              <source media="(max-width: 640px)" srcset="assets/01_mieszkanie_katowicka_mobile.jpg">
+              <img src="assets/01_mieszkanie_katowicka.jpg" alt="Projekt mieszkania Katowicka">
+            </picture>
+          </div>
+          <p class="projekty__label">mieszkanie katowicka</p>
+        </a>
+        <a href="projekt-wuwa.html" class="projekty__item">
+          <div class="projekty__img-wrap">
+            <picture>
+              <source media="(max-width: 640px)" srcset="assets/02_mieszkanie_wuwa_mobile.jpg">
+              <img src="assets/02_mieszkanie_wuwa.jpg" alt="Mieszkanie WUWA">
+            </picture>
+          </div>
+          <p class="projekty__label">mieszkanie wuwa</p>
+        </a>
+        <a href="projekt-rathbone.html" class="projekty__item">
+          <div class="projekty__img-wrap">
+            <picture>
+              <source media="(max-width: 640px)" srcset="assets/03_biuro_londyn_mobile.jpg">
+              <img src="assets/03_biuro_londyn.jpg" alt="Biuro Rathbone Londyn">
+            </picture>
+          </div>
+          <p class="projekty__label">biuro rathbone</p>
+        </a>
+        <a href="projekt-gdynia.html" class="projekty__item">
+          <div class="projekty__img-wrap">
+            <picture>
+              <source media="(max-width: 640px)" srcset="assets/05_apartament_gdynia_mobile.jpg">
+              <img src="assets/05_apartament_gdynia.jpg" alt="Apartament Gdynia">
+            </picture>
+          </div>
+          <p class="projekty__label">apartament gdynia</p>
+        </a>
+        <a href="projekt-antresola.html" class="projekty__item">
+          <div class="projekty__img-wrap">
+            <picture>
+              <source media="(max-width: 640px)" srcset="assets/04_projekt_antersoli_mobile.jpg">
+              <img src="assets/04_projekt_antersoli.jpg" alt="Projekt antresoli">
+            </picture>
+          </div>
+          <p class="projekty__label">projekt antresoli</p>
+        </a>
+        <a href="projekt-coming-soon.html" class="projekty__item">
+          <div class="projekty__img-wrap">
+            <picture>
+              <source media="(max-width: 640px)" srcset="assets/06_coming_soon_mobile.jpg">
+              <img src="assets/06_coming_soon.jpg" alt="Coming soon – miejsce na Twój projekt">
+            </picture>
+          </div>
+          <p class="projekty__label">coming soon</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIE -->
+  <section id="opinie" class="section section--accent">
+    <div class="container">
+      <h2 class="section__title">opinie</h2>
+      <div class="opinie__carousel">
+        <button class="opinie__arrow opinie__arrow--prev" aria-label="Poprzednia opinia">
+          <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16 2 3 17l13 15" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="opinie__track">
+          <div class="opinie__slide opinie__slide--active">
+            <div class="opinie__pair">
+              <blockquote class="opinie__item">
+                <p class="opinie__text">Karolina jest profesjonalistką w każdym calu. Rzadko zdarzają się fachowcy, którzy potrafią słuchać tak dobrze jak ona. Jej zaangażowanie pomogło wielokrotnie rozładować atmosferę przy stresującym remoncie. Bardzo polecam!</p>
+                <footer class="opinie__author">BM</footer>
+              </blockquote>
+              <blockquote class="opinie__item">
+                <p class="opinie__text">Na każdym etapie czułam, że moje potrzeby są dobrze rozumiane. O niektórych rozwiązaniach Karoliny nawet bym wcześniej nie pomyślała, widać od razu, że zna się na temacie. I co najważniejsze, wszystko na czas. Polecam!</p>
+                <footer class="opinie__author">Karolina</footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="opinie__slide">
+            <div class="opinie__pair">
+              <blockquote class="opinie__item">
+                <p class="opinie__text">Zmysł estetyki i minimalizmu, o który mi chodziło, został spełniony totalnie! Możliwość oglądania finalnych wersji w dwóch opcjach nie zdarza się często. I teraz mieszka się lepiej.</p>
+                <footer class="opinie__author">Paweł</footer>
+              </blockquote>
+              <blockquote class="opinie__item">
+                <p class="opinie__text">Jestem absolutnie zachwycona współpracą! Projekt idealnie trafił w moje gusta i potrzeby. Po realizacji mieszkanie wygląda obłędnie! Świetny kontakt, zdecydowanie polecam!</p>
+                <footer class="opinie__author">Teresa</footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="opinie__slide">
+            <div class="opinie__pair">
+              <blockquote class="opinie__item">
+                <p class="opinie__text">Myślałem, że w moim mieszkaniu nie da się już nic zrobić i na zawsze pozostanie nijakie, ale dzięki Studiolina moje cztery kąty zyskały nową jakość. Polecam z czystym sumieniem.</p>
+                <footer class="opinie__author">Bartosz</footer>
+              </blockquote>
+              <blockquote class="opinie__item">
+                <p class="opinie__text">Świetnie mi się współpracowało z Karoliną. Mój salon uzyskał piękną duszę. Karolina dopasowała styl, który mi odpowiadał, budżet i funkcjonalność. Jestem bardzo zadowolona i szczerze polecam!</p>
+                <footer class="opinie__author">Monika</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <button class="opinie__arrow opinie__arrow--next" aria-label="Następna opinia">
+          <svg width="18" height="34" viewBox="0 0 18 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M2 2 15 17 2 32" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <p class="opinie__source"><a href="https://www.oferteo.pl/studiolina/firma/7150575" target="_blank" rel="noopener">5.0 ★ · 12 opinii na Oferteo</a></p>
+    </div>
+  </section>
+
+  <!-- CENNIK -->
+  <section id="cennik" class="section">
+    <div class="container">
+      <h2 class="section__title section__title--dark">cennik</h2>
+      <div class="cennik__grid">
+
+        <div class="cennik__card">
+          <h3 class="cennik__name">Pakiet 1</h3>
+          <p class="cennik__desc">Projekt koncepcyjny</p>
+          <p class="cennik__price">od 150 pln/m²</p>
+          <ul class="cennik__list">
+            <li>inwentaryzacja i brief</li>
+            <li>moodboard</li>
+            <li>2 warianty układu</li>
+            <li>model 3D</li>
+            <li>wizualizacje</li>
+            <li>2 rundy poprawek</li>
+          </ul>
+        </div>
+
+        <div class="cennik__card">
+          <h3 class="cennik__name">Pakiet 2</h3>
+          <p class="cennik__desc">Projekt koncepcyjny + wykonawczy</p>
+          <p class="cennik__price">od 200 pln/m²</p>
+          <ul class="cennik__list">
+            <li>wszystko z Pakietu 1 +</li>
+            <li>rysunki techniczne (elewacje, plany,<br>projekt elektryki, hydrauliki)</li>
+            <li>detale zabudowy meblowej</li>
+            <li>lista materiałów i elementów<br>wyposażenia z cenami</li>
+            <li>1 wspólne wyjście do showroomów<br>(dobór materiałów na żywo)</li>
+          </ul>
+        </div>
+
+        <div class="cennik__card">
+          <h3 class="cennik__name">Pakiet 3</h3>
+          <p class="cennik__desc">Pełen projekt + nadzór autorski</p>
+          <p class="cennik__price">od 250 pln/m²</p>
+          <ul class="cennik__list">
+            <li>wszystko z Pakietu 2 +</li>
+            <li>drugie wyjście do showroomów<br>(razem 2)</li>
+            <li>do 5 wizyt na budowie</li>
+            <li>koordynacja mailowa</li>
+            <li>kontakt telefoniczny z wykonawcami</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="cennik__cta">
+        <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary">umów bezpłatną konsultację</a>
+        <a href="mailto:karolina@studiolina.pl" class="btn btn--outline">napisz, jeśli masz pytania</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- O STUDIOLINIE -->
+  <section id="studio" class="section section--accent">
+    <div class="container">
+      <h2 class="section__title">o studiolinie</h2>
+      <div class="about__grid">
+        <img src="assets/about_foto.jpg" alt="Karolina Gawlik – architektka wnętrz" class="about__photo">
+        <div class="about__text">
+          <p>Jestem Karolina, założycielka studioliny. Z wykształcenia architektka. Ukończyłam z wyróżnieniem Wydział Architektury Politechniki Wrocławskiej. Potem zdobywałam doświadczenie w europejskich pracowniach: 3XN w Kopenhadze, CoveBurgess w Londynie i XML w Amsterdamie. Mam też doświadczenie komercyjne w projektowaniu przestrzeni biurowych i gastronomicznych.</p>
+          <p>W studiolinie wykorzystuję to doświadczenie, tworząc wnętrza, które mają charakter, maksymalnie wykorzystują przestrzeń, a przede wszystkim skupiają się na człowieku. Projektuję tak, żeby dobrze Ci się mieszkało w przestrzeni, która jest naprawdę Twoja — wyjątkowa, skrojona pod potrzeby i styl życia, a nie jest estetyczną kopią kolejnego obrazka z Pinteresta.</p>
+          <p>Jeśli chcesz nawiązać współpracę, umów się na bezpłatną konsultację albo napisz bezpośrednio: <a href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a>. Odpisuję w ciągu dwóch dni.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT / FOOTER -->
+  <footer id="kontakt" class="footer">
+    <div class="container footer__content">
+      <div class="footer__info">
+        <p>zadzwoń: <a href="tel:+48690303701">+48 690 303 701</a> <span class="footer__note">(także WhatsApp)</span></p>
+        <p>napisz: <a href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a></p>
+        <p>śledź: <a href="https://instagram.com/studiolina.pl" target="_blank" rel="noopener">@studiolina.pl</a></p>
+        <p class="footer__location">WROCŁAW / ONLINE</p>
+        <p class="footer__lang">also available in English</p>
+        <p class="footer__copy">© studiolina 2026</p>
+      </div>
+      <p class="footer__logo">studiolina.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    const burger = document.querySelector('.nav__burger');
+    const links = document.querySelector('.nav__links');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      links.classList.toggle('open');
+      burger.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('active');
+        links.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Opinie carousel
+    const slides = document.querySelectorAll('.opinie__slide');
+    const prevBtn = document.querySelector('.opinie__arrow--prev');
+    const nextBtn = document.querySelector('.opinie__arrow--next');
+    let current = 0;
+
+    function showSlide(i) {
+      slides.forEach(s => s.classList.remove('opinie__slide--active'));
+      current = (i + slides.length) % slides.length;
+      slides[current].classList.add('opinie__slide--active');
+    }
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => showSlide(current - 1));
+      nextBtn.addEventListener('click', () => showSlide(current + 1));
+    }
+
+    // Scroll reveal
+    const revealTargets = document.querySelectorAll(
+      '.section__title, .proces__list li, .opinie__carousel, .opinie__source, .about__photo, .about__text, .section .container > .btn'
+    );
+
+    document.querySelectorAll('.proces__list li').forEach((el, i) =>
+      el.style.setProperty('--reveal-delay', (i * 0.1) + 's'));
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+
+    revealTargets.forEach(el => {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+
+    // Gridy (projekty, cennik) — jeden trigger na cały grid, kaskada lewo→prawo.
+    // Jeśli elementy są ułożone w kolumnie (mobile), każdy osobno, bez delaya.
+    function revealCascade(gridSelector, itemSelector, delay) {
+      const grid = document.querySelector(gridSelector);
+      const items = Array.from(document.querySelectorAll(itemSelector));
+      if (!grid || !items.length) return;
+
+      items.forEach(el => el.classList.add('reveal'));
+
+      // wykrycie realnego układu: czy drugi element stoi obok pierwszego?
+      const sideBySide = items.length > 1 &&
+        Math.abs(items[0].offsetTop - items[1].offsetTop) < 10;
+
+      if (!sideBySide) {
+        items.forEach(el => io.observe(el));
+      } else {
+        items.forEach((el, i) =>
+          el.style.setProperty('--reveal-delay', (i * delay) + 's'));
+        // trigger dopiero gdy góra grida przekroczy ~75% wysokości ekranu —
+        // wtedy animacja dzieje się na oczach, nie pod dolną krawędzią
+        const ioGrid = new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              items.forEach(el => el.classList.add('is-visible'));
+              ioGrid.unobserve(e.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -25% 0px', threshold: 0 });
+        ioGrid.observe(grid);
+      }
+    }
+
+    revealCascade('.projekty__grid', '.projekty__item', 0.07);
+    revealCascade('.cennik__grid', '.cennik__card', 0.1);
+
+    // Hero — kropki do ręcznego przełączania (bez auto-zmiany, żeby nie konkurować z CTA)
+    (function () {
+      const slides = Array.from(document.querySelectorAll('.hero__slide'));
+      const dotsWrap = document.querySelector('.hero__dots');
+      if (slides.length <= 1 || !dotsWrap) return;
+
+      const dots = slides.map((_, i) => {
+        const b = document.createElement('button');
+        b.className = 'hero__dot' + (i === 0 ? ' is-active' : '');
+        b.setAttribute('aria-label', 'Zdjęcie ' + (i + 1));
+        b.addEventListener('click', () => {
+          slides.forEach(s => s.classList.remove('is-active'));
+          dots.forEach(d => d.classList.remove('is-active'));
+          slides[i].classList.add('is-active');
+          b.classList.add('is-active');
+        });
+        dotsWrap.appendChild(b);
+        return b;
+      });
+    })();
+  </script>
+</body>
+</html>

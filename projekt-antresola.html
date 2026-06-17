@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projekt antresoli – wnętrze loftowe, Wrocław, studiolina">
+  <title>Projekt antresoli – studiolina</title>
+  <link rel="preload" href="assets/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">studiolina.</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html#projekty">projekty</a>
+      <a href="index.html#cennik">cennik</a>
+      <a href="index.html#studio">studio</a>
+      <a href="index.html#kontakt">kontakt</a>
+    </div>
+  </nav>
+
+  <!-- PROJEKT -->
+  <section class="projekt">
+    <div class="container">
+
+      <a href="index.html#projekty" class="projekt__back">← wszystkie projekty</a>
+
+      <h1 class="projekt__title">projekt antresoli</h1>
+
+      <div class="projekt__meta">
+        <span>Wrocław</span>
+        <span>2025</span>
+        <span>projekt wnętrz</span>
+      </div>
+
+      <p class="projekt__desc">Niewielka przestrzeń na piętrze, do której prowadzą wąskie schody. Pomieszczenie naturalnie dzieliło się na strefę sypialnianą i miejsce do pracy, potrzebowało jednak wyraźnego rozgraniczenia. Sypialnię oddzieliłam od pracowni czarną lateksową kurtyną, to podział odważny i zarazem bardzo funkcjonalny. Miejsce do pracy stoi na istniejącej stalowej kracie, która potęguje loftowy charakter wnętrza i przepuszcza światło. Ultramarynowe linki przy schodach, jaskrawoczerwony fotel i ścienny uchwyt na rower nadają surowej bazie osobowość. Industrialne materiały balansują z miękkimi, przyjemnymi w dotyku elementami, a każdy zakamarek pracuje na funkcjonalność mimo ograniczonego metrażu. Efekt: osobiste, bezkompromisowe wnętrze, w którym loftowa estetyka, kolor i sprytny detal budują unikalną atmosferę.</p>
+
+      <div class="projekt__gallery">
+        <img src="assets/antresola/antresola-1.png" alt="Projekt antresoli – strefa pracy na stalowej kracie">
+        <div class="projekt__pair">
+          <img src="assets/antresola/antresola-2.jpg" alt="Projekt antresoli">
+          <img src="assets/antresola/antresola-3.jpg" alt="Projekt antresoli">
+        </div>
+        <img src="assets/antresola/antresola-4.png" alt="Projekt antresoli – strefa sypialniana">
+        <div class="projekt__pair">
+          <img src="assets/antresola/antresola-5.jpg" alt="Projekt antresoli">
+          <img src="assets/antresola/antresola-6.jpg" alt="Projekt antresoli">
+        </div>
+        <div class="projekt__pair">
+          <img src="assets/antresola/antresola-7.jpg" alt="Projekt antresoli">
+          <img src="assets/antresola/antresola-8.jpg" alt="Projekt antresoli">
+        </div>
+      </div>
+
+      <div class="projekt__cta">
+        <p class="projekt__cta-text">podoba Ci się ten projekt? porozmawiajmy o Twoim</p>
+        <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary">umów bezpłatną konsultację</a>
+      </div>
+
+      <nav class="projekt__nav">
+        <a href="projekt-gdynia.html" class="projekt__nav-item">← apartament gdynia</a>
+        <a href="projekt-coming-soon.html" class="projekt__nav-item">coming soon →</a>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="kontakt" class="footer">
+    <div class="container footer__content">
+      <div class="footer__info">
+        <p>zadzwoń: <a href="tel:+48690303701">+48 690 303 701</a> <span class="footer__note">(także WhatsApp)</span></p>
+        <p>napisz: <a href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a></p>
+        <p>śledź: <a href="https://instagram.com/studiolina.pl" target="_blank" rel="noopener">@studiolina.pl</a></p>
+        <p class="footer__location">WROCŁAW / ONLINE</p>
+        <p class="footer__lang">also available in English</p>
+        <p class="footer__copy">© studiolina 2026</p>
+      </div>
+      <p class="footer__logo">studiolina.</p>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.nav__burger');
+    const links = document.querySelector('.nav__links');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      links.classList.toggle('open');
+      burger.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('active');
+        links.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal
+    const revealTargets = document.querySelectorAll('.projekt__gallery > *, .projekt__cta, .projekt__nav');
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+
+    revealTargets.forEach(el => {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  </script>
+</body>
+</html>

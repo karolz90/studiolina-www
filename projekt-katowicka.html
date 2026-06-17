@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mieszkanie Katowicka – projekt wnętrza, studiolina Wrocław">
+  <title>Mieszkanie Katowicka – studiolina</title>
+  <link rel="preload" href="assets/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">studiolina.</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html#projekty">projekty</a>
+      <a href="index.html#cennik">cennik</a>
+      <a href="index.html#studio">studio</a>
+      <a href="index.html#kontakt">kontakt</a>
+    </div>
+  </nav>
+
+  <!-- PROJEKT -->
+  <section class="projekt">
+    <div class="container">
+
+      <a href="index.html#projekty" class="projekt__back">← wszystkie projekty</a>
+
+      <h1 class="projekt__title">mieszkanie katowicka</h1>
+
+      <div class="projekt__meta">
+        <span>42 m²</span>
+        <span>Wrocław</span>
+        <span>2023</span>
+        <span>projekt wnętrz</span>
+      </div>
+
+      <p class="projekt__desc">Mieszkanie w modernistycznym Księżu Małym, otwarty układ z jedynymi drzwiami, odsłonięta i pobielona cegła, rozjaśnione oryginalne podłogi i łososiowe płytki spinające wizualnie kuchnię z łazienką. Wyposażenie to mix vintage z pchlich targów, OLX i rodzinnych pamiątek. Przewodnim motywem stał się accidental red, pojawiający się w detalach całego mieszkania. Na 42 m², dom, w którym główną rolę gra naturalne światło.</p>
+
+      <div class="projekt__gallery">
+        <img src="assets/katowicka/katowicka-1.jpg" alt="Mieszkanie Katowicka – salon">
+        <img src="assets/katowicka/katowicka-2.jpg" alt="Mieszkanie Katowicka – rzut">
+        <div class="projekt__pair">
+          <img src="assets/katowicka/katowicka-3.jpg" alt="Mieszkanie Katowicka">
+          <img src="assets/katowicka/katowicka-4.jpg" alt="Mieszkanie Katowicka">
+        </div>
+        <div class="projekt__pair">
+          <img src="assets/katowicka/katowicka-5.jpg" alt="Mieszkanie Katowicka">
+          <img src="assets/katowicka/katowicka-6.jpg" alt="Mieszkanie Katowicka">
+        </div>
+        <div class="projekt__pair">
+          <img src="assets/katowicka/katowicka-6a.jpg" alt="Mieszkanie Katowicka">
+          <img src="assets/katowicka/katowicka-6b.jpg" alt="Mieszkanie Katowicka">
+        </div>
+        <div class="projekt__pair">
+          <img src="assets/katowicka/katowicka-7.jpg" alt="Mieszkanie Katowicka">
+          <img src="assets/katowicka/katowicka-8.jpg" alt="Mieszkanie Katowicka">
+        </div>
+        <div class="projekt__pair">
+          <img src="assets/katowicka/katowicka-9.jpg" alt="Mieszkanie Katowicka">
+          <img src="assets/katowicka/katowicka-10.jpg" alt="Mieszkanie Katowicka">
+        </div>
+        <div class="projekt__pair">
+          <img src="assets/katowicka/katowicka-11.jpg" alt="Mieszkanie Katowicka">
+          <img src="assets/katowicka/katowicka-12.jpg" alt="Mieszkanie Katowicka">
+        </div>
+        <div class="projekt__pair">
+          <img src="assets/katowicka/katowicka-13.jpg" alt="Mieszkanie Katowicka">
+          <img src="assets/katowicka/katowicka-14.jpg" alt="Mieszkanie Katowicka">
+        </div>
+        <div class="projekt__pair">
+          <img src="assets/katowicka/katowicka-15.jpg" alt="Mieszkanie Katowicka">
+          <img src="assets/katowicka/katowicka-16.jpg" alt="Mieszkanie Katowicka">
+        </div>
+      </div>
+
+      <div class="projekt__cta">
+        <p class="projekt__cta-text">podoba Ci się ten projekt? porozmawiajmy o Twoim</p>
+        <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary">umów bezpłatną konsultację</a>
+      </div>
+
+      <nav class="projekt__nav">
+        <span class="projekt__nav-item projekt__nav-item--disabled"></span>
+        <a href="projekt-wuwa.html" class="projekt__nav-item">mieszkanie wuwa →</a>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="kontakt" class="footer">
+    <div class="container footer__content">
+      <div class="footer__info">
+        <p>zadzwoń: <a href="tel:+48690303701">+48 690 303 701</a> <span class="footer__note">(także WhatsApp)</span></p>
+        <p>napisz: <a href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a></p>
+        <p>śledź: <a href="https://instagram.com/studiolina.pl" target="_blank" rel="noopener">@studiolina.pl</a></p>
+        <p class="footer__location">WROCŁAW / ONLINE</p>
+        <p class="footer__lang">also available in English</p>
+        <p class="footer__copy">© studiolina 2026</p>
+      </div>
+      <p class="footer__logo">studiolina.</p>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.nav__burger');
+    const links = document.querySelector('.nav__links');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      links.classList.toggle('open');
+      burger.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('active');
+        links.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal
+    const revealTargets = document.querySelectorAll('.projekt__gallery > *, .projekt__cta, .projekt__nav');
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+
+    revealTargets.forEach(el => {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  </script>
+</body>
+</html>

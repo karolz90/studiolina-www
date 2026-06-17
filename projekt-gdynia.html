@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apartament Gdynia – projekt wnętrza otwartego studio, studiolina">
+  <title>Apartament Gdynia – studiolina</title>
+  <link rel="preload" href="assets/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">studiolina.</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav__links">
+      <a href="index.html#projekty">projekty</a>
+      <a href="index.html#cennik">cennik</a>
+      <a href="index.html#studio">studio</a>
+      <a href="index.html#kontakt">kontakt</a>
+    </div>
+  </nav>
+
+  <!-- PROJEKT -->
+  <section class="projekt">
+    <div class="container">
+
+      <a href="index.html#projekty" class="projekt__back">← wszystkie projekty</a>
+
+      <h1 class="projekt__title">apartament gdynia</h1>
+
+      <div class="projekt__meta">
+        <span>Gdynia</span>
+        <span>2015</span>
+        <span>projekt wnętrz</span>
+      </div>
+
+      <p class="projekt__desc">Otwarte studio w Gdyni, zaprojektowane we współpracy z Przemysławem Smalcerzem. Sercem wnętrza jest wielofunkcyjny kubik, który mieści rozkładane łóżko i szafę, dzięki czemu mieszkanie płynnie zmienia konfigurację w ciągu dnia. Strefę dzienną od części intymnej oddziela płócienna zasłona. Na czas spotkań łóżko znika w zabudowie, jego miejsce zajmuje ukryty wcześniej stół, a całość otwiera się na przestronny taras. Białe ściany i drewniane podłogi tworzą modernistyczne tło dla surowego betonowego sufitu. Charakter dopełniają detale w stylu art deco i sztuka Tamary Łempickiej. Przestrzeń dostosowuje się do rytmu dnia i zachowuje przy tym artystyczną spójność.</p>
+
+      <div class="projekt__gallery">
+        <img src="assets/gdynia/gdynia_apartament-1.jpg" alt="Apartament Gdynia – otwarte studio">
+        <img src="assets/gdynia/gdynia_apartament-1a.jpg" alt="Apartament Gdynia">
+        <img src="assets/gdynia/gdynia_apartament-2.png" alt="Apartament Gdynia">
+        <div class="projekt__pair">
+          <img src="assets/gdynia/gdynia_apartament-3.jpg" alt="Apartament Gdynia">
+          <img src="assets/gdynia/gdynia_apartament-4.jpg" alt="Apartament Gdynia">
+        </div>
+        <img src="assets/gdynia/gdynia_apartament-5.png" alt="Apartament Gdynia – rzut">
+        <div class="projekt__pair">
+          <img src="assets/gdynia/gdynia_apartament-6.jpg" alt="Apartament Gdynia">
+          <img src="assets/gdynia/gdynia_apartament-7.jpg" alt="Apartament Gdynia">
+        </div>
+        <img src="assets/gdynia/gdynia_apartament-8.png" alt="Apartament Gdynia">
+        <img src="assets/gdynia/gdynia_apartament-9.jpg" alt="Apartament Gdynia">
+      </div>
+
+      <div class="projekt__cta">
+        <p class="projekt__cta-text">podoba Ci się ten projekt? porozmawiajmy o Twoim</p>
+        <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary">umów bezpłatną konsultację</a>
+      </div>
+
+      <nav class="projekt__nav">
+        <a href="projekt-rathbone.html" class="projekt__nav-item">← biuro rathbone</a>
+        <a href="projekt-antresola.html" class="projekt__nav-item">projekt antresoli →</a>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="kontakt" class="footer">
+    <div class="container footer__content">
+      <div class="footer__info">
+        <p>zadzwoń: <a href="tel:+48690303701">+48 690 303 701</a> <span class="footer__note">(także WhatsApp)</span></p>
+        <p>napisz: <a href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a></p>
+        <p>śledź: <a href="https://instagram.com/studiolina.pl" target="_blank" rel="noopener">@studiolina.pl</a></p>
+        <p class="footer__location">WROCŁAW / ONLINE</p>
+        <p class="footer__lang">also available in English</p>
+        <p class="footer__copy">© studiolina 2026</p>
+      </div>
+      <p class="footer__logo">studiolina.</p>
+    </div>
+  </footer>
+
+  <script>
+    const burger = document.querySelector('.nav__burger');
+    const links = document.querySelector('.nav__links');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      links.classList.toggle('open');
+      burger.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('active');
+        links.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal
+    const revealTargets = document.querySelectorAll('.projekt__gallery > *, .projekt__cta, .projekt__nav');
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+
+    revealTargets.forEach(el => {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  </script>
+</body>
+</html>
