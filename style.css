@@ -288,19 +288,23 @@ img {
   font-weight: 700;
   font-size: 40px;
   line-height: 1.25;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   color: var(--light);
   margin-bottom: 22px;
 }
 
 .hero__sub {
-  font-family: var(--font-mono);
+  font-family: var(--font-main);
   font-weight: 500;
-  font-size: 15px;
-  letter-spacing: -0.5px;
+  font-size: 19px;
+  letter-spacing: 0;
   color: var(--light);
-  opacity: 0.85;
+  opacity: 1;
   margin-bottom: 28px;
+}
+
+.hero__br-mobile {
+  display: none;
 }
 
 .hero__buttons {
@@ -1030,11 +1034,15 @@ img {
 
   .hero__title {
     font-size: 26px;
-    letter-spacing: -1.2px;
+    letter-spacing: 0;
   }
 
   .hero__sub {
-    font-size: 13px;
+    font-size: 15px;
+  }
+
+  .hero__br-mobile {
+    display: inline;
   }
 
   .hero__buttons {
