@@ -65,7 +65,11 @@
       <picture class="hero__slide">
         <img src="assets/hero_2.jpg" alt="Projekt wnętrza – mieszkanie Katowicka" class="hero__img">
       </picture>
-      <!-- 3. slajd: dodaj tu kolejny <picture class="hero__slide">...</picture>, kropka dorobi się sama -->
+      <picture class="hero__slide">
+        <source media="(max-width: 640px)" srcset="assets/biskupin_4_mobile.jpg">
+        <img src="assets/biskupin/biskupin_4.jpg" alt="Projekt wnętrza – mieszkanie Biskupin" class="hero__img">
+      </picture>
+      <!-- 4. slajd: dodaj tu kolejny <picture class="hero__slide">...</picture>, kropka dorobi się sama -->
     </div>
     <div class="hero__dots" aria-label="Wybór zdjęcia"></div>
     <div class="hero__overlay">
@@ -120,11 +124,20 @@
           </div>
           <p class="projekty__label">mieszkanie katowicka</p>
         </a>
+        <a href="projekt-biskupin.html" class="projekty__item">
+          <div class="projekty__img-wrap">
+            <picture>
+              <source media="(max-width: 640px)" srcset="assets/02_wille_biskupin_mobile.jpg">
+              <img src="assets/02_wille_biskupin.jpg" alt="Mieszkanie Biskupin">
+            </picture>
+          </div>
+          <p class="projekty__label">mieszkanie biskupin</p>
+        </a>
         <a href="projekt-wuwa.html" class="projekty__item">
           <div class="projekty__img-wrap">
             <picture>
-              <source media="(max-width: 640px)" srcset="assets/02_mieszkanie_wuwa_mobile.jpg">
-              <img src="assets/02_mieszkanie_wuwa.jpg" alt="Mieszkanie WUWA">
+              <source media="(max-width: 640px)" srcset="assets/03_mieszkanie_wuwa_mobile.jpg">
+              <img src="assets/03_mieszkanie_wuwa.jpg" alt="Mieszkanie WUWA">
             </picture>
           </div>
           <p class="projekty__label">mieszkanie wuwa</p>
@@ -132,8 +145,8 @@
         <a href="projekt-rathbone.html" class="projekty__item">
           <div class="projekty__img-wrap">
             <picture>
-              <source media="(max-width: 640px)" srcset="assets/03_biuro_londyn_mobile.jpg">
-              <img src="assets/03_biuro_londyn.jpg" alt="Biuro Rathbone Londyn">
+              <source media="(max-width: 640px)" srcset="assets/04_biuro_londyn_mobile.jpg">
+              <img src="assets/04_biuro_londyn.jpg" alt="Biuro Rathbone Londyn">
             </picture>
           </div>
           <p class="projekty__label">biuro rathbone</p>
@@ -150,20 +163,11 @@
         <a href="projekt-antresola.html" class="projekty__item">
           <div class="projekty__img-wrap">
             <picture>
-              <source media="(max-width: 640px)" srcset="assets/04_projekt_antersoli_mobile.jpg">
-              <img src="assets/04_projekt_antersoli.jpg" alt="Projekt antresoli">
+              <source media="(max-width: 640px)" srcset="assets/06_projekt_antersoli_mobile.jpg">
+              <img src="assets/06_projekt_antersoli.jpg" alt="Projekt antresoli">
             </picture>
           </div>
           <p class="projekty__label">projekt antresoli</p>
-        </a>
-        <a href="projekt-coming-soon.html" class="projekty__item">
-          <div class="projekty__img-wrap">
-            <picture>
-              <source media="(max-width: 640px)" srcset="assets/06_coming_soon_mobile.jpg">
-              <img src="assets/06_coming_soon.jpg" alt="Coming soon – miejsce na Twój projekt">
-            </picture>
-          </div>
-          <p class="projekty__label">coming soon</p>
         </a>
       </div>
     </div>
