@@ -12,112 +12,92 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Coming soon – tu może pojawić się Twój projekt. Studiolina, projektowanie wnętrz Wrocław">
-  <title>Coming soon – studiolina</title>
-  <link rel="preload" href="assets/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="description" content="Coming soon, tu może pojawić się Twój projekt. studiolina, projektowanie wnętrz Wrocław">
+  <meta name="theme-color" content="#f5f2ec">
+  <title>Coming soon | studiolina</title>
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.__slReady) document.documentElement.classList.remove('js'); }, 3000);
+  </script>
+  <link rel="preload" href="assets/fonts/manrope-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/manrope-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script src="js/lenis.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script type="speculationrules">
+    { "prefetch": [{ "where": { "selector_matches": ".next a, a.next__link, a.next__prev, a.projekt__back" }, "eagerness": "moderate" }] }
+  </script>
 </head>
-<body>
+<body class="page-project">
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="index.html" class="nav__logo">studiolina.</a>
-    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
+  <a class="skip" href="#tresc">przejdź do treści</a>
+
+  <header class="nav" data-nav>
+    <a href="index.html" class="nav__logo" aria-label="studiolina, strona główna">studiolina.</a>
+    <nav class="nav__links" id="menu" aria-label="Główna nawigacja">
+      <a href="index.html#projekty"><span>projekty</span></a>
+      <a href="index.html#cennik"><span>cennik</span></a>
+      <a href="index.html#studio"><span>studio</span></a>
+      <a href="index.html#kontakt"><span>kontakt</span></a>
+      <div class="nav__menu-foot">
+        <a href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a>
+        <a href="tel:+48690303701">+48 690 303 701</a>
+      </div>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
     </button>
-    <div class="nav__links">
-      <a href="index.html#projekty">projekty</a>
-      <a href="index.html#cennik">cennik</a>
-      <a href="index.html#studio">studio</a>
-      <a href="index.html#kontakt">kontakt</a>
-    </div>
-  </nav>
+  </header>
 
-  <!-- PROJEKT -->
-  <section class="projekt">
+  <main id="tresc" class="projekt">
     <div class="container">
 
-      <a href="index.html#projekty" class="projekt__back">← wszystkie projekty</a>
+      <a href="index.html#projekty" class="projekt__back"><span>←</span> wszystkie projekty</a>
 
-      <h1 class="projekt__title">coming soon</h1>
+      <h1 class="projekt__title" data-split>coming soon</h1>
 
-      <div class="projekt__meta">
-        <span>Twoja lokalizacja</span>
-        <span>2026</span>
-        <span>Twój projekt</span>
-      </div>
+      <dl class="titleblock" style="--cols:3">
+        <div class="titleblock__cell"><dt>lokalizacja</dt><dd>Twoja lokalizacja</dd></div>
+        <div class="titleblock__cell"><dt>rok</dt><dd>2026</dd></div>
+        <div class="titleblock__cell"><dt>zakres</dt><dd>Twój projekt</dd></div>
+      </dl>
 
-      <p class="projekt__desc">Ten projekt jeszcze nie istnieje. Może to będzie Twoje mieszkanie, dom po remoncie albo lokal, w którym dobrze się przebywa. Jeśli planujesz zmianę, umów się na bezpłatną rozmowę. Sprawdzimy, czy do siebie pasujemy, a to miejsce w portfolio poczeka na efekt naszej współpracy.</p>
+
+
+      <p class="projekt__desc" data-reveal="fade">Ten projekt jeszcze nie istnieje. Może to będzie Twoje mieszkanie, dom po remoncie albo lokal, w którym dobrze się przebywa. Jeśli planujesz zmianę, umów się na bezpłatną rozmowę. Sprawdzimy, czy do siebie pasujemy, a to miejsce w portfolio poczeka na efekt naszej współpracy.</p>
 
       <div class="projekt__gallery">
-        <img src="assets/comingsoon.jpg" alt="Coming soon – miejsce na Twój projekt" class="projekt__img--half">
+        <figure class="media projekt__img--half" data-reveal="media"><img src="assets/comingsoon.jpg" alt="Coming soon, miejsce na Twój projekt" width="236" height="270" loading="lazy" decoding="async"></figure>
       </div>
 
       <div class="projekt__cta">
-        <p class="projekt__cta-text">porozmawiajmy o Twoim wnętrzu</p>
-        <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary">umów bezpłatną konsultację</a>
+        <p class="projekt__cta-text" data-split>porozmawiajmy o Twoim wnętrzu</p>
+        <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary" data-reveal="fade"><span>umów bezpłatną konsultację</span></a>
       </div>
 
-      <nav class="projekt__nav">
-        <a href="projekt-antresola.html" class="projekt__nav-item">← projekt antresoli</a>
-        <span class="projekt__nav-item projekt__nav-item--disabled"></span>
+      <nav class="next" aria-label="Inne projekty">
+        <a class="next__prev" href="projekt-antresola.html">← projekt antresoli</a>
+        
       </nav>
 
     </div>
-  </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer id="kontakt" class="footer">
-    <div class="container footer__content">
+  <footer id="kontakt" class="footer" data-footer>
+    <div class="container footer__grid">
       <div class="footer__info">
-        <p>zadzwoń: <a href="tel:+48690303701">+48 690 303 701</a> <span class="footer__note">(także WhatsApp)</span></p>
-        <p>napisz: <a href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a></p>
-        <p>śledź: <a href="https://instagram.com/studiolina.pl" target="_blank" rel="noopener">@studiolina.pl</a></p>
+        <p>zadzwoń: <a class="link" href="tel:+48690303701">+48 690 303 701</a> <span class="footer__note">(także WhatsApp)</span></p>
+        <p>napisz: <a class="link" href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a></p>
+        <p><a class="footer__ig" href="https://instagram.com/studiolina.pl" target="_blank" rel="noopener" aria-label="Instagram: @studiolina.pl"><!-- ikona: Lucide (ISC) --><svg class="footer__ig-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><span class="link">@studiolina.pl</span></a></p>
+      </div>
+      <div class="footer__side">
         <p class="footer__location">WROCŁAW / ONLINE</p>
         <p class="footer__lang">also available in English</p>
         <p class="footer__copy">© studiolina 2026</p>
       </div>
-      <p class="footer__logo">studiolina.</p>
     </div>
+    <p class="footer__logo" aria-hidden="true" data-letters>studiolina.</p>
   </footer>
 
-  <script>
-    const burger = document.querySelector('.nav__burger');
-    const links = document.querySelector('.nav__links');
-
-    burger.addEventListener('click', () => {
-      burger.classList.toggle('active');
-      links.classList.toggle('open');
-      burger.setAttribute('aria-expanded', links.classList.contains('open'));
-    });
-
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        burger.classList.remove('active');
-        links.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Scroll reveal
-    const revealTargets = document.querySelectorAll('.projekt__gallery > *, .projekt__cta, .projekt__nav');
-
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('is-visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
-
-    revealTargets.forEach(el => {
-      el.classList.add('reveal');
-      io.observe(el);
-    });
-  </script>
 </body>
 </html>

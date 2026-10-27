@@ -12,144 +12,127 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mieszkanie Biskupin – ciepły minimalizm z nutą art déco, projekt wnętrza, studiolina Wrocław">
-  <title>Mieszkanie Biskupin – studiolina</title>
-  <link rel="preload" href="assets/fonts/manrope-800.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="description" content="Mieszkanie Biskupin, ciepły minimalizm z nutą art déco, projekt wnętrza, studiolina Wrocław">
+  <meta name="theme-color" content="#f5f2ec">
+  <title>Mieszkanie Biskupin | studiolina</title>
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.__slReady) document.documentElement.classList.remove('js'); }, 3000);
+  </script>
+  <link rel="preload" href="assets/fonts/manrope-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/manrope-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script src="js/lenis.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script type="speculationrules">
+    { "prefetch": [{ "where": { "selector_matches": ".next a, a.next__link, a.next__prev, a.projekt__back" }, "eagerness": "moderate" }] }
+  </script>
 </head>
-<body>
+<body class="page-project">
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="index.html" class="nav__logo">studiolina.</a>
-    <button class="nav__burger" aria-label="Menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
+  <a class="skip" href="#tresc">przejdź do treści</a>
+
+  <header class="nav" data-nav>
+    <a href="index.html" class="nav__logo" aria-label="studiolina, strona główna">studiolina.</a>
+    <nav class="nav__links" id="menu" aria-label="Główna nawigacja">
+      <a href="index.html#projekty"><span>projekty</span></a>
+      <a href="index.html#cennik"><span>cennik</span></a>
+      <a href="index.html#studio"><span>studio</span></a>
+      <a href="index.html#kontakt"><span>kontakt</span></a>
+      <div class="nav__menu-foot">
+        <a href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a>
+        <a href="tel:+48690303701">+48 690 303 701</a>
+      </div>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
     </button>
-    <div class="nav__links">
-      <a href="index.html#projekty">projekty</a>
-      <a href="index.html#cennik">cennik</a>
-      <a href="index.html#studio">studio</a>
-      <a href="index.html#kontakt">kontakt</a>
-    </div>
-  </nav>
+  </header>
 
-  <!-- PROJEKT -->
-  <section class="projekt">
+  <main id="tresc" class="projekt">
     <div class="container">
 
-      <a href="index.html#projekty" class="projekt__back">← wszystkie projekty</a>
+      <a href="index.html#projekty" class="projekt__back"><span>←</span> wszystkie projekty</a>
 
-      <h1 class="projekt__title">mieszkanie biskupin</h1>
+      <h1 class="projekt__title" data-split>mieszkanie biskupin</h1>
 
-      <div class="projekt__meta">
-        <span>56 m²</span>
-        <span>Wrocław</span>
-        <span>2026</span>
-        <span>projekt wnętrz</span>
-      </div>
+      <dl class="titleblock" style="--cols:4">
+        <div class="titleblock__cell"><dt>powierzchnia</dt><dd>56 m²</dd></div>
+        <div class="titleblock__cell"><dt>lokalizacja</dt><dd>Wrocław</dd></div>
+        <div class="titleblock__cell"><dt>rok</dt><dd>2026</dd></div>
+        <div class="titleblock__cell"><dt>zakres</dt><dd>projekt wnętrz</dd></div>
+      </dl>
 
-      <p class="projekt__desc">Kameralne mieszkanie o powierzchni 56 m² na wrocławskim Biskupinie zaprojektowaliśmy dla pary z dzieckiem. Metraż nie jest duży, a mimo to pomieścił wszystko, czego potrzebuje ta rodzina: otwarty salon z aneksem kuchennym, dwa osobne pokoje, łazienkę i wygodne WC. Estetykę utrzymaliśmy w ciepłych tonach przełamanych pudrowym niebieskim, który jako przewodni motyw powraca w całym wnętrzu i spina je w spójną całość. Na podłodze położyliśmy lastryko w pięknym odcieniu „botticino", a zabudowę wykonaliśmy z ciemnego orzecha o wyraźnym usłojeniu w połączeniu z niebieską płytą meblową, całość punktowo przełamaną akcentami czerwieni. Charakterystycznym detalem są płytki w reliefie, które pojawiają się w kuchni oraz w łazience na obudowie wanny. Chromowane lampy dodają elegancji, a półokrągłe, miękkie kształty nadają wnętrzu ponadczasowej nuty art déco.</p>
+      <figure class="media projekt__lead" data-reveal="media" data-lead-media><img src="assets/biskupin/biskupin_1.jpg" alt="Mieszkanie Biskupin, salon" width="2400" height="1340" decoding="async"></figure>
+
+      <p class="projekt__desc" data-reveal="fade">Kameralne mieszkanie o powierzchni 56 m² na wrocławskim Biskupinie zaprojektowaliśmy dla pary z dzieckiem. Metraż nie jest duży, a mimo to pomieścił wszystko, czego potrzebuje ta rodzina: otwarty salon z aneksem kuchennym, dwa osobne pokoje, łazienkę i wygodne WC. Estetykę utrzymaliśmy w ciepłych tonach przełamanych pudrowym niebieskim, który jako przewodni motyw powraca w całym wnętrzu i spina je w spójną całość. Na podłodze położyliśmy lastryko w pięknym odcieniu „botticino", a zabudowę wykonaliśmy z ciemnego orzecha o wyraźnym usłojeniu w połączeniu z niebieską płytą meblową, całość punktowo przełamaną akcentami czerwieni. Charakterystycznym detalem są płytki w reliefie, które pojawiają się w kuchni oraz w łazience na obudowie wanny. Chromowane lampy dodają elegancji, a półokrągłe, miękkie kształty nadają wnętrzu ponadczasowej nuty art déco.</p>
 
       <div class="projekt__gallery">
-        <img src="assets/biskupin/biskupin_1.jpg" alt="Mieszkanie Biskupin – salon">
         <div class="projekt__pair">
-          <img src="assets/biskupin/biskupin_2.jpg" alt="Mieszkanie Biskupin">
-          <img src="assets/biskupin/biskupin_3.jpg" alt="Mieszkanie Biskupin">
+          <figure class="media" data-reveal="media"><img src="assets/biskupin/biskupin_2.jpg" alt="Mieszkanie Biskupin" width="1200" height="1443" loading="lazy" decoding="async"></figure>
+          <figure class="media" data-reveal="media" style="--d:0.14s"><img src="assets/biskupin/biskupin_3.jpg" alt="Mieszkanie Biskupin" width="1200" height="1636" loading="lazy" decoding="async"></figure>
         </div>
-        <img src="assets/biskupin/biskupin_4.jpg" alt="Mieszkanie Biskupin">
+        <figure class="media" data-reveal="media"><img src="assets/biskupin/biskupin_4.jpg" alt="Mieszkanie Biskupin" width="2400" height="1384" loading="lazy" decoding="async"></figure>
         <div class="projekt__pair">
-          <img src="assets/biskupin/biskupin_5.jpg" alt="Mieszkanie Biskupin">
-          <img src="assets/biskupin/biskupin_6.jpg" alt="Mieszkanie Biskupin">
-        </div>
-        <div class="projekt__pair">
-          <img src="assets/biskupin/biskupin_7.jpg" alt="Mieszkanie Biskupin">
-          <img src="assets/biskupin/biskupin_8.jpg" alt="Mieszkanie Biskupin">
-        </div>
-        <img src="assets/biskupin/biskupin_9.jpg" alt="Mieszkanie Biskupin">
-        <div class="projekt__pair">
-          <img src="assets/biskupin/biskupin_10.jpg" alt="Mieszkanie Biskupin">
-          <img src="assets/biskupin/biskupin_11.jpg" alt="Mieszkanie Biskupin">
-        </div>
-        <img src="assets/biskupin/biskupin_12.jpg" alt="Mieszkanie Biskupin">
-        <div class="projekt__pair">
-          <img src="assets/biskupin/biskupin_13.jpg" alt="Mieszkanie Biskupin">
-          <img src="assets/biskupin/biskupin_14.jpg" alt="Mieszkanie Biskupin">
+          <figure class="media" data-reveal="media"><img src="assets/biskupin/biskupin_5.jpg" alt="Mieszkanie Biskupin" width="1200" height="1134" loading="lazy" decoding="async"></figure>
+          <figure class="media" data-reveal="media" style="--d:0.14s"><img src="assets/biskupin/biskupin_6.jpg" alt="Mieszkanie Biskupin" width="1200" height="1134" loading="lazy" decoding="async"></figure>
         </div>
         <div class="projekt__pair">
-          <img src="assets/biskupin/biskupin_15.jpg" alt="Mieszkanie Biskupin">
-          <img src="assets/biskupin/biskupin_16.jpg" alt="Mieszkanie Biskupin">
+          <figure class="media" data-reveal="media"><img src="assets/biskupin/biskupin_7.jpg" alt="Mieszkanie Biskupin" width="1200" height="1636" loading="lazy" decoding="async"></figure>
+          <figure class="media" data-reveal="media" style="--d:0.14s"><img src="assets/biskupin/biskupin_8.jpg" alt="Mieszkanie Biskupin" width="1200" height="1643" loading="lazy" decoding="async"></figure>
+        </div>
+        <figure class="media" data-reveal="media"><img src="assets/biskupin/biskupin_9.jpg" alt="Mieszkanie Biskupin" width="2400" height="1384" loading="lazy" decoding="async"></figure>
+        <div class="projekt__pair">
+          <figure class="media" data-reveal="media"><img src="assets/biskupin/biskupin_10.jpg" alt="Mieszkanie Biskupin" width="1200" height="1618" loading="lazy" decoding="async"></figure>
+          <figure class="media" data-reveal="media" style="--d:0.14s"><img src="assets/biskupin/biskupin_11.jpg" alt="Mieszkanie Biskupin" width="1200" height="1636" loading="lazy" decoding="async"></figure>
+        </div>
+        <figure class="media" data-reveal="media"><img src="assets/biskupin/biskupin_12.jpg" alt="Mieszkanie Biskupin" width="2400" height="1377" loading="lazy" decoding="async"></figure>
+        <div class="projekt__pair">
+          <figure class="media" data-reveal="media"><img src="assets/biskupin/biskupin_13.jpg" alt="Mieszkanie Biskupin" width="1200" height="1861" loading="lazy" decoding="async"></figure>
+          <figure class="media" data-reveal="media" style="--d:0.14s"><img src="assets/biskupin/biskupin_14.jpg" alt="Mieszkanie Biskupin" width="1180" height="1851" loading="lazy" decoding="async"></figure>
         </div>
         <div class="projekt__pair">
-          <img src="assets/biskupin/biskupin_17.jpg" alt="Mieszkanie Biskupin">
-          <img src="assets/biskupin/biskupin_18.jpg" alt="Mieszkanie Biskupin">
+          <figure class="media" data-reveal="media"><img src="assets/biskupin/biskupin_15.jpg" alt="Mieszkanie Biskupin" width="1200" height="1809" loading="lazy" decoding="async"></figure>
+          <figure class="media" data-reveal="media" style="--d:0.14s"><img src="assets/biskupin/biskupin_16.jpg" alt="Mieszkanie Biskupin" width="1200" height="1798" loading="lazy" decoding="async"></figure>
+        </div>
+        <div class="projekt__pair">
+          <figure class="media" data-reveal="media"><img src="assets/biskupin/biskupin_17.jpg" alt="Mieszkanie Biskupin" width="1200" height="1186" loading="lazy" decoding="async"></figure>
+          <figure class="media" data-reveal="media" style="--d:0.14s"><img src="assets/biskupin/biskupin_18.jpg" alt="Mieszkanie Biskupin" width="1200" height="1165" loading="lazy" decoding="async"></figure>
         </div>
       </div>
 
       <div class="projekt__cta">
-        <p class="projekt__cta-text">podoba Ci się ten projekt? porozmawiajmy o Twoim</p>
-        <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary">umów bezpłatną konsultację</a>
+        <p class="projekt__cta-text" data-split>podoba Ci się ten projekt? porozmawiajmy o Twoim</p>
+        <a href="https://calendly.com/karolina-studiolina/20min" target="_blank" rel="noopener" class="btn btn--primary" data-reveal="fade"><span>umów bezpłatną konsultację</span></a>
       </div>
 
-      <nav class="projekt__nav">
-        <a href="projekt-katowicka.html" class="projekt__nav-item">← mieszkanie katowicka</a>
-        <a href="projekt-wuwa.html" class="projekt__nav-item">mieszkanie wuwa →</a>
+      <nav class="next" aria-label="Inne projekty">
+        <a class="next__prev" href="projekt-katowicka.html">← mieszkanie katowicka</a>
+        <a class="next__link" href="projekt-wuwa.html">
+          <span class="next__label">następny projekt</span>
+          <span class="next__thumb" aria-hidden="true"><img src="assets/03_mieszkanie_wuwa_mobile.jpg" alt="" loading="lazy"></span>
+          <span class="next__name">mieszkanie wuwa</span>
+        </a>
       </nav>
 
     </div>
-  </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer id="kontakt" class="footer">
-    <div class="container footer__content">
+  <footer id="kontakt" class="footer" data-footer>
+    <div class="container footer__grid">
       <div class="footer__info">
-        <p>zadzwoń: <a href="tel:+48690303701">+48 690 303 701</a> <span class="footer__note">(także WhatsApp)</span></p>
-        <p>napisz: <a href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a></p>
-        <p>śledź: <a href="https://instagram.com/studiolina.pl" target="_blank" rel="noopener">@studiolina.pl</a></p>
+        <p>zadzwoń: <a class="link" href="tel:+48690303701">+48 690 303 701</a> <span class="footer__note">(także WhatsApp)</span></p>
+        <p>napisz: <a class="link" href="mailto:karolina@studiolina.pl">karolina@studiolina.pl</a></p>
+        <p><a class="footer__ig" href="https://instagram.com/studiolina.pl" target="_blank" rel="noopener" aria-label="Instagram: @studiolina.pl"><!-- ikona: Lucide (ISC) --><svg class="footer__ig-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><span class="link">@studiolina.pl</span></a></p>
+      </div>
+      <div class="footer__side">
         <p class="footer__location">WROCŁAW / ONLINE</p>
         <p class="footer__lang">also available in English</p>
         <p class="footer__copy">© studiolina 2026</p>
       </div>
-      <p class="footer__logo">studiolina.</p>
     </div>
+    <p class="footer__logo" aria-hidden="true" data-letters>studiolina.</p>
   </footer>
 
-  <script>
-    const burger = document.querySelector('.nav__burger');
-    const links = document.querySelector('.nav__links');
-
-    burger.addEventListener('click', () => {
-      burger.classList.toggle('active');
-      links.classList.toggle('open');
-      burger.setAttribute('aria-expanded', links.classList.contains('open'));
-    });
-
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        burger.classList.remove('active');
-        links.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Scroll reveal
-    const revealTargets = document.querySelectorAll('.projekt__gallery > *, .projekt__cta, .projekt__nav');
-
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('is-visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
-
-    revealTargets.forEach(el => {
-      el.classList.add('reveal');
-      io.observe(el);
-    });
-  </script>
 </body>
 </html>
