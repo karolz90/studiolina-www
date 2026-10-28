@@ -1342,8 +1342,8 @@ img[data-parallax] { translate: 0 var(--py, 0px); }
 
   .section { padding: 72px 0; }
 
-  .chain { margin-bottom: 44px; }
-  .chain__label { font-size: 11px; }
+  /* na telefonie bez łańcucha wymiarowego: czasy etapów są w liście kroków */
+  .chain { display: none; }
 
   .step { grid-template-columns: 34px 1fr; gap: 0 10px; }
   .proces__main > .btn,
